@@ -1,6 +1,6 @@
-# SQLDelight on Android: Getting Started: Materials
+# SQLDelight in Android: Getting Started: Materials
 
-This repo contains all the downloadable materials and projects associated with the **[SQLDelight on Android: Getting Started](https://www.raywenderlich.com/library)** from [raywenderlich.com](https://www.raywenderlich.com).
+This repo contains all the downloadable materials and projects associated with the **[SQLDelight in Android: Getting Started](https://www.raywenderlich.com/library)** from [raywenderlich.com](https://www.raywenderlich.com).
 
 Each edition has its own branch, named `versions/[VERSION]`. The default branch for this repo is for the most recent edition.
 
