@@ -1,0 +1,18 @@
+<resources>
+
+  <style name="AppTheme" parent="Theme.AppCompat.DayNight.DarkActionBar">
+    <item name="android:windowBackground">@color/colorBackground</item>
+    <item name="android:listDivider">@drawable/list_divider</item>
+
+    <item name="android:textColorPrimary">@color/colorSurface</item>
+    <item name="colorPrimary">@color/colorPrimary</item>
+    <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+    <item name="colorAccent">@color/colorAccent</item>
+    <item name="colorSurface">@color/colorBackground</item>
+  </style>
+
+  <style name="AppTheme.Inverted">
+    <item name="android:windowBackground">@color/colorText</item>
+    <item name="colorSurface">@color/colorSurface</item>
+  </style>
+</resources>

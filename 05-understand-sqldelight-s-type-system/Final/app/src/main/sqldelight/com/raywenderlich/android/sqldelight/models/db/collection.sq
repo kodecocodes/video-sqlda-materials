@@ -1,0 +1,7 @@
+import java.time.ZonedDateTime;
+
+CREATE TABLE collection (
+  collectionId INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+  creationTime INTEGER AS ZonedDateTime NOT NULL,
+  name TEXT NOT NULL
+);

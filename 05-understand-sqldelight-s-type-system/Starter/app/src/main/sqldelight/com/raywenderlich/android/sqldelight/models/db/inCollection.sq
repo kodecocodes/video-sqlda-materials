@@ -1,0 +1,13 @@
+CREATE TABLE inCollection (
+  collectionId INTEGER NOT NULL,
+  bugId INTEGER NOT NULL,
+  quantity INTEGER NOT NULL,
+
+  FOREIGN KEY(collectionId)
+    REFERENCES collection(collectionId)
+    ON DELETE CASCADE,
+
+  FOREIGN KEY(bugId)
+    REFERENCES bug(bugId)
+    ON DELETE CASCADE
+);
