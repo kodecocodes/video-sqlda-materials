@@ -3,8 +3,8 @@ CREATE TABLE bugAttributes (
   bugId INTEGER NOT NULL,
   size TEXT NOT NULL,
   weight TEXT NOT NULL,
-  attack INTEGER AS Int NOT NULL,
-  defense INTEGER AS Int NOT NULL,
+  attack INTEGER NOT NULL,
+  defense INTEGER NOT NULL,
 
   FOREIGN KEY(bugId)
     REFERENCES bug(bugId)

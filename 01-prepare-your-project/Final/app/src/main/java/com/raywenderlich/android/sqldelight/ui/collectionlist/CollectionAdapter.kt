@@ -90,7 +90,7 @@ class CollectionListAdapter : ListAdapter<Collection, CollectionHolder>(diffCall
     val item = getItem(position)
     holder.idTextView.text = "#${item.collectionId}"
     holder.nameTextView.text = item.name
-    holder.creationTextView.text = item.creationTime.format(formatter)
+    holder.creationTextView.text = item.creationTime.toString()
 
     // Listeners
     holder.layout.setOnClickListener { _clickEvents.offer(item.collectionId) }
