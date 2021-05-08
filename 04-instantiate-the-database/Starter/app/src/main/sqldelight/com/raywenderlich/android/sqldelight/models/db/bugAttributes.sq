@@ -1,0 +1,12 @@
+CREATE TABLE bugAttributes (
+  attributesId INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+  bugId INTEGER NOT NULL,
+  size TEXT NOT NULL,
+  weight TEXT NOT NULL,
+  attack INTEGER NOT NULL,
+  defense INTEGER NOT NULL,
+
+  FOREIGN KEY(bugId)
+    REFERENCES bug(bugId)
+    ON DELETE CASCADE
+);

@@ -1,0 +1,5 @@
+CREATE TABLE collection (
+  collectionId INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+  creationTime INTEGER NOT NULL,
+  name TEXT NOT NULL
+);
