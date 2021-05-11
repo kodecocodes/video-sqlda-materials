@@ -35,6 +35,7 @@
 package com.raywenderlich.android.sqldelight.repositories
 
 import com.raywenderlich.android.sqldelight.db.Database
+import com.raywenderlich.android.sqldelight.models.BugDetails
 import com.raywenderlich.android.sqldelight.models.BugWithQuantity
 import com.raywenderlich.android.sqldelight.models.db.Collection
 import com.squareup.sqldelight.ColumnAdapter
@@ -70,6 +71,13 @@ class DatabaseRepository(driver: SqlDriver) {
         return database.inCollectionQueries
             .listBugsInCollection(collectionId) { bugId, name, quantity ->
                 BugWithQuantity(bugId, name, imageUrl = null, quantity)
+            }
+    }
+
+    fun getBugById(bugId: Long): Query<BugDetails> {
+        return database.bugQueries
+            .findById(bugId) { bugId, name, description, size, weight, attack, defense ->
+                BugDetails(bugId, name, null, description, size, weight, attack, defense)
             }
     }
 
