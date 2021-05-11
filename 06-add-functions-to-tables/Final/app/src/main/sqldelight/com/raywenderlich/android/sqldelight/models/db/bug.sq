@@ -3,8 +3,3 @@ CREATE TABLE bug (
     name TEXT NOT NULL,
     description TEXT
 );
-
-findById:
-SELECT bug.bugId, name, description, size, weight, attack, defense FROM bug
-NATURAL JOIN bugAttributes
-WHERE bug.bugId = :bugId;

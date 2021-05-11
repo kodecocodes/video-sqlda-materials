@@ -87,7 +87,7 @@ class CollectionDetailViewModel(
           id = collectionId,
           createdAt = collection.creationTime,
           name = collection.name,
-          description = "",
+          description = "<TODO>",
           bugs = bugs,
           totalBugCount = bugs.sumBy(BugWithQuantity::quantity),
         )

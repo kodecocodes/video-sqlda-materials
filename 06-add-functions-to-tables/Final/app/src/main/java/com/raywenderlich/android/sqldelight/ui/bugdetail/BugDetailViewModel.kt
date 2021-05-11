@@ -55,12 +55,6 @@ class BugDetailViewModel(
   val state: Flow<State> = _state
 
   init {
-    val bug = repository.getBugById(bugId).executeAsOneOrNull()
-
-    _state.value = if (bug != null) {
-      State.Result(bug)
-    } else {
-      State.NotFound
-    }
+    // TODO
   }
 }
