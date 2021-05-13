@@ -1,0 +1,53 @@
+CREATE TABLE inCollection (
+  collectionId INTEGER NOT NULL,
+  bugId INTEGER NOT NULL,
+  quantity INTEGER AS Int NOT NULL,
+
+  FOREIGN KEY(collectionId)
+    REFERENCES collection(collectionId)
+    ON DELETE CASCADE,
+
+  FOREIGN KEY(bugId)
+    REFERENCES bug(bugId)
+    ON DELETE CASCADE
+);
+
+CREATE VIEW bugsInCollection AS
+SELECT
+  collectionId,
+  bug.bugId,
+  name,
+  quantity
+FROM inCollection
+NATURAL JOIN bug;
+
+listBugsInCollection:
+SELECT *
+FROM bugsInCollection
+WHERE collectionId = :collectionId;
+
+listBugsInCollectionByName:
+SELECT *
+FROM bugsInCollection
+WHERE collectionId = :collectionId
+ORDER BY name;
+
+listBugsInCollectionByQuantity:
+SELECT *
+FROM bugsInCollection
+WHERE collectionId = :collectionId
+ORDER BY quantity;
+
+addBugToCollection:
+INSERT INTO inCollection(collectionId, bugId, quantity)
+VALUES (:collectionId, :bugId, :quantity);
+
+getQuantity:
+SELECT quantity
+FROM inCollection
+WHERE collectionId = :collectionId AND bugId = :bugId;
+
+updateQuantity:
+UPDATE inCollection
+SET quantity = ?3
+WHERE collectionId = ?1 AND bugId = ?2;
