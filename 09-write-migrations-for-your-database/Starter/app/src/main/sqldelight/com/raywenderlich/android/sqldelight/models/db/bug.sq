@@ -1,0 +1,27 @@
+
+
+CREATE TABLE bug (
+    bugId INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+    name TEXT NOT NULL,
+    description TEXT
+);
+
+insert {
+    INSERT INTO bug(name, description)
+    VALUES (:name, :description);
+
+    INSERT INTO bugAttributes(bugId, size, weight, attack, defense)
+    VALUES ((SELECT last_insert_rowid()), :size, :weight, :attack, :defense);
+}
+
+findById:
+SELECT bug.bugId, name, description, size, weight, attack, defense FROM bug
+NATURAL JOIN bugAttributes
+WHERE bug.bugId = :bugId;
+
+getLastInsertedId:
+SELECT last_insert_rowid();
+
+deleteById:
+DELETE FROM bug
+WHERE bugId = :bugId;
