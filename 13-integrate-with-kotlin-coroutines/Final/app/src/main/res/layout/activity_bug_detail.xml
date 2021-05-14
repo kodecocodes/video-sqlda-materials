@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Copyright (c) 2021 Razeware LLC
+  ~
+  ~ Permission is hereby granted, free of charge, to any person obtaining a copy
+  ~ of this software and associated documentation files (the "Software"), to deal
+  ~ in the Software without restriction, including without limitation the rights
+  ~ to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+  ~ copies of the Software, and to permit persons to whom the Software is
+  ~ furnished to do so, subject to the following conditions:
+  ~
+  ~ The above copyright notice and this permission notice shall be included in
+  ~ all copies or substantial portions of the Software.
+  ~
+  ~ Notwithstanding the foregoing, you may not use, copy, modify, merge, publish,
+  ~ distribute, sublicense, create a derivative work, and/or sell copies of the
+  ~ Software in any work that is designed, intended, or marketed for pedagogical or
+  ~ instructional purposes related to programming, coding, application development,
+  ~ or information technology.  Permission for such use, copying, modification,
+  ~ merger, publication, distribution, sublicensing, creation of derivative works,
+  ~ or sale is expressly withheld.
+  ~
+  ~ This project and source code may use libraries or frameworks that are
+  ~ released under various Open-Source licenses. Use of those libraries and
+  ~ frameworks are governed by their own individual licenses.
+  ~
+  ~ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  ~ IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  ~ FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+  ~ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  ~ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+  ~ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+  ~ THE SOFTWARE.
+  -->
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.bugdetail.BugDetailActivity">
+
+  <ImageView
+      android:id="@+id/image"
+      android:layout_width="0dp"
+      android:layout_height="0dp"
+      android:scaleType="centerCrop"
+      app:layout_constraintDimensionRatio="16:9"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      tools:src="@tools:sample/avatars" />
+
+  <TextView
+      android:id="@+id/stats"
+      style="@style/TextAppearance.AppCompat.Large.Inverse"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginBottom="8dp"
+      android:layout_marginEnd="8dp"
+      android:background="?colorSurface"
+      android:padding="8dp"
+      app:layout_constraintBottom_toBottomOf="@id/image"
+      app:layout_constraintEnd_toEndOf="@id/image"
+      tools:text="40 ATK / 20 DEF" />
+
+  <TextView
+      android:id="@+id/name"
+      style="@style/TextAppearance.AppCompat.Display1"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="8dp"
+      app:layout_constraintEnd_toEndOf="@id/rightGuideline"
+      app:layout_constraintHorizontal_bias="0"
+      app:layout_constraintStart_toStartOf="@id/leftGuideline"
+      app:layout_constraintTop_toBottomOf="@id/image"
+      tools:text="Bug Name" />
+
+  <TextView
+      android:id="@+id/size_label"
+      style="@style/TextAppearance.AppCompat.Medium"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:text="@string/label_size"
+      app:layout_constraintEnd_toEndOf="@id/centerGuideline"
+      app:layout_constraintStart_toStartOf="@id/name"
+      app:layout_constraintTop_toBottomOf="@id/name" />
+
+  <TextView
+      android:id="@+id/size"
+      style="@style/TextAppearance.AppCompat.Body1"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:textColor="?attr/colorSurface"
+      app:layout_constraintEnd_toEndOf="@id/centerGuideline"
+      app:layout_constraintStart_toStartOf="@id/name"
+      app:layout_constraintTop_toBottomOf="@id/size_label"
+      tools:text="2.50 m" />
+
+  <TextView
+      android:id="@+id/weight_label"
+      style="@style/TextAppearance.AppCompat.Medium"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:text="@string/label_size"
+      app:layout_constraintEnd_toEndOf="@id/rightGuideline"
+      app:layout_constraintStart_toStartOf="@id/centerGuideline"
+      app:layout_constraintTop_toBottomOf="@id/name" />
+
+  <TextView
+      android:id="@+id/weight"
+      style="@style/TextAppearance.AppCompat.Body1"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:textColor="?attr/colorSurface"
+      app:layout_constraintEnd_toEndOf="@id/rightGuideline"
+      app:layout_constraintStart_toStartOf="@id/centerGuideline"
+      app:layout_constraintTop_toBottomOf="@id/weight_label"
+      tools:text="2.6 kg" />
+
+  <View
+      android:id="@+id/divider"
+      android:layout_width="0dp"
+      android:layout_height="1dp"
+      android:layout_marginTop="16dp"
+      android:background="@color/colorBackground"
+      app:layout_constraintEnd_toEndOf="@id/rightGuideline"
+      app:layout_constraintStart_toStartOf="@id/leftGuideline"
+      app:layout_constraintTop_toBottomOf="@id/stats_barrier" />
+
+  <TextView
+      android:id="@+id/description_label"
+      style="@style/TextAppearance.AppCompat.Medium"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="16dp"
+      android:text="@string/label_description"
+      app:layout_constraintEnd_toEndOf="@id/rightGuideline"
+      app:layout_constraintStart_toStartOf="@id/leftGuideline"
+      app:layout_constraintTop_toBottomOf="@id/divider" />
+
+  <TextView
+      android:id="@+id/description"
+      android:layout_width="0dp"
+      android:layout_height="0dp"
+      tools:text="Bug Description text text"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="@id/rightGuideline"
+      app:layout_constraintStart_toStartOf="@id/leftGuideline"
+      app:layout_constraintTop_toBottomOf="@id/description_label" />
+
+  <androidx.constraintlayout.widget.Barrier
+      android:id="@+id/stats_barrier"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      app:barrierDirection="bottom"
+      app:constraint_referenced_ids="weight,size" />
+
+  <androidx.constraintlayout.widget.Guideline
+      android:id="@+id/leftGuideline"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:orientation="vertical"
+      app:layout_constraintGuide_percent="0.1" />
+
+  <androidx.constraintlayout.widget.Guideline
+      android:id="@+id/centerGuideline"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:orientation="vertical"
+      app:layout_constraintGuide_percent="0.5" />
+
+  <androidx.constraintlayout.widget.Guideline
+      android:id="@+id/rightGuideline"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:orientation="vertical"
+      app:layout_constraintGuide_percent="0.9" />
+</androidx.constraintlayout.widget.ConstraintLayout>

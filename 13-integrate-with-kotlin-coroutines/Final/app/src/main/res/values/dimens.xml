@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <dimen name="screen_padding_horizontal">12dp</dimen>
+  <dimen name="screen_padding_vertical">4dp</dimen>
+  <dimen name="card_padding_horizontal">16dp</dimen>
+  <dimen name="card_padding_vertical">12dp</dimen>
+  <dimen name="dialog_input_padding">8dp</dimen>
+</resources>
