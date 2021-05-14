@@ -1,0 +1,32 @@
+<resources>
+  <string name="app_name">SQLDelight in Android</string>
+  <string name="timestamp_format">MMM d, YYYY</string>
+
+  <string name="title_add_collection">Add Collection</string>
+  <string name="hint_add_collection">Name</string>
+
+  <string name="title_rename_collection">Rename Collection</string>
+  <string name="hint_rename_collection">New Name</string>
+
+  <string name="title_delete_collection">Delete Collection</string>
+  <string name="text_delete_collection">This collection will be deleted.</string>
+  <string name="default_collection_name">Untitled Collection</string>
+
+  <string name="label_ok">OK</string>
+  <string name="label_create">Create</string>
+  <string name="label_cancel">Cancel</string>
+  <string name="label_collection_description">Description</string>
+  <string name="label_collection_creation">Created</string>
+
+  <plurals name="plural_collection_detail_title">
+    <item quantity="one">%s (1 Bug)</item>
+    <item quantity="other">%1$s (%2$d Bugs)</item>
+  </plurals>
+
+  <string name="menu_edit">Edit</string>
+  <string name="menu_delete">Delete</string>
+  <string name="label_size">Size</string>
+  <string name="label_description">Description</string>
+  <string name="label_stats_format">%1$d ATK / %2$d DEF</string>
+  <string name="title_bug_details">Details</string>
+</resources>

@@ -1,0 +1,31 @@
+import java.time.ZonedDateTime;
+
+CREATE TABLE collection (
+  collectionId INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+  creationTime INTEGER AS ZonedDateTime NOT NULL,
+  name TEXT NOT NULL
+);
+
+count:
+SELECT count(*) FROM collection;
+
+all:
+SELECT * FROM collection
+LIMIT :limit OFFSET :offset;
+
+insert:
+INSERT INTO collection(creationTime, name)
+VALUES (:creationTime, :name);
+
+findById:
+SELECT * FROM collection
+WHERE collectionId = ?;
+
+rename:
+UPDATE collection
+SET name = :name
+WHERE collectionId = :collectionId;
+
+deleteById:
+DELETE FROM collection
+WHERE collectionId = :collectionId;

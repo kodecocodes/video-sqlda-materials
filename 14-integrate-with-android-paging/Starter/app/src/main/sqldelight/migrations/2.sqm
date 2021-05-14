@@ -1,0 +1,9 @@
+CREATE VIEW bugsInCollection AS
+SELECT
+  collectionId,
+  bug.bugId,
+  name,
+  imageUrl,
+  quantity
+FROM inCollection
+NATURAL JOIN bug;
